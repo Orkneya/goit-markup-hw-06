@@ -37,11 +37,60 @@
                 </svg>
             </button>
        </div>
-       <!-- <div class="mobil-menu">
-        <div class="container mobil-menu-container">
+       <!-- modal-menu-->
+       <div class="mobil-menu ">
+        <button type="button" class="mobil-btm">
+            <svg class="mobil-btm-close" height="8" width="8">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <ul class="mobil-list">
+            <li class="mobil-item"><a class="mobil-link current" href="./index.html">Studio</a></li>
+            <li class="mobil-item"><a class="mobil-link" href="">Portfolio</a></li>
+            <li class="mobil-item"><a class="mobil-link" href="">Contacts</a></li> 
+        </ul>
+        <address class="mobil-contacts">
+            <ul class="mobil-contacts-list">
+                <li class="mobil-contacts-list-item"><a class="mobil-contacts-list-sand  current-contacts" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                </li>
+                <li class="mobil-contacts-list-item"><a class="mobil-contacts-list-sand" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </li>
+            </ul>
+        </address>
+        <ul class="mobil-soc-items-list">
+            <li class="mobil-soc-icons-items">
+                <a class="mobil-soc-link" href="" target="_blank">
+                    <svg class="mobil-soc-icons" width="16" height="16">
+                        <use href="./images/icons.svg#icon-instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobil-soc-icons-items">
+                <a class="mobil-soc-link" href="" target="_blank">
+                    <svg class="mobil-soc-icons" width="16" height="16">
+                        <use href="./images/icons.svg#icon-twitter"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobil-soc-icons-items">
+                <a class="mobil-soc-link" href="" target="_blank">
+                    <svg class="mobil-soc-icons" width="16" height="16">
+                        <use href="./images/icons.svg#icon-facebook"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mobil-soc-icons-items">
+                <a class="mobil-soc-link" href="" target="_blank">
+                    <svg class="mobil-soc-icons" width="16" height="16">
+                        <use href="./images/icons.svg#icon-linkedin"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+        <!-- <div class="container mobil-menu-container">
 
-        </div>
-       </div> -->
+        </div> -->
+       </div>
     </header>
     <main>
         <!-- 1 section  -->
@@ -114,7 +163,9 @@
                 <h2 class="main-team-title">Our Team</h2>
                 <ul class="main-team-list">
                     <li class="main-team-itam">
-                        <img class="main-team-foto" src="./images/img1.jpg" alt="Mark" width="264" height="260">
+                        <img class="main-team-foto" 
+                        srcset="./images/img1.jpg 1x,./images/img1-2x.jpg 2x"
+                        src="./images/img1.jpg" alt="Mark" width="264" height="260">
                         <div class="main-team-dopcontainer">
                             <h3 class="main-team-subtitle">Mark Guerrero</h3>
                             <p class="main-team-text">Product Designer</p>
@@ -151,7 +202,9 @@
                         </div>
                     </li>
                     <li class="main-team-itam">
-                        <img class="main-team-foto" src="./images/img2.jpg" alt="Tom" width="264" height="260">
+                        <img class="main-team-foto" 
+                        srcset="./images/img2.jpg 1x,./images/img2-2x.jpg 2x"
+                        src="./images/img2.jpg" alt="Tom" width="264" height="260">
                        <div class="main-team-dopcontainer">
                             <h3 class="main-team-subtitle">Tom Ford</h3>
                             <p class="main-team-text">Frontend Developer</p>
@@ -188,7 +241,9 @@
                         </div>
                     </li>
                     <li class="main-team-itam">
-                        <img class="main-team-foto" src="./images/img3.jpg" alt="Camila" width="264" height="260">
+                        <img class="main-team-foto" 
+                        srcset="./images/img3.jpg 1x,./images/img3-2x.jpg 2x"
+                        src="./images/img3.jpg" alt="Camila" width="264" height="260">
                         <div class="main-team-dopcontainer">
                             <h3 class="main-team-subtitle">Camila Garcia</h3>
                             <p class="main-team-text">Marketing</p>
@@ -225,7 +280,8 @@
                         </div>
                     </li>
                     <li class="main-team-itam">
-                        <img class="main-team-foto" src="./images/img4.jpg" alt="Daniel" width="264" height="260">
+                        <img class="main-team-foto" 
+                        srcset="./images/img4.jpg 1x,./images/img4-2x.jpg 2x"src="./images/img4.jpg" alt="Daniel" width="264" height="260">
                        <div class="main-team-dopcontainer">
                             <h3 class="main-team-subtitle">Daniel Wilson</h3>
                             <p class="main-team-text">UI Designer</p>
@@ -271,7 +327,22 @@
                 <ul class="function-list">
                     <li class="function-item">
                         <div class="function-dopcontainer-big">
-                            <img class="function-picture" src="./images/im1.jpg" alt="Pages app" width="360" height="300">
+                            <picture>
+                                <source srcset="./images/im1.jpg 1x,
+                                ./images/im1-2x-comp.jpg 2x"
+                                media="(min-width: 1158px)"
+                                />
+                                <source srcset="./images/im1-1x-tab.jpg 1x,
+                                ./images/im1-2x-comp.jpg 2x"
+                                media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/im1-1x-tel.jpg 1x,
+                                ./images/im1-2x-tel.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img class="function-picture" src="./images/im1.jpg" 
+                                alt="Pages app" width="360" />
+                            </picture>
                             <p class="function-color-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                             </p>
                           </div>
@@ -279,11 +350,25 @@
                                 <h3 class="function-subtitle">Banking App</h3>
                                 <P class="function-text">App</P>
                            </div>
-
                         </li>
                     <li class="function-item">
                           <div class="function-dopcontainer-big">  
-                            <img class="function-picture" src="./images/im2.jpg" alt="Phone payment" width="360" height="300">
+                            <picture>
+                                <source srcset="./images/im2.jpg 1x,
+                                ./images/im2-2x-comp.jpg 2x"
+                                media="(min-width: 1158px)"
+                                />
+                                <source srcset="./images/im2-1x-tab.jpg 1x,
+                                ./images/im2-2x-comp.jpg 2x"
+                                media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/im2-1x-tel.jpg 1x,
+                                ./images/im2-2x-tel.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img class="function-picture" src="./images/im2.jpg" 
+                                alt="Pages app" width="360" />
+                            </picture>
                             <p class="function-color-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                             </p>
                           </div>
@@ -294,7 +379,22 @@
                         </li>
                     <li class="function-item">
                             <div class="function-dopcontainer-big">  
-                            <img class="function-picture" src="./images/im3.jpg" alt="Screen" width="360" height="300">
+                                <picture>
+                                    <source srcset="./images/im3.jpg 1x,
+                                    ./images/im3-2x-comp.jpg 2x"
+                                    media="(min-width: 1158px)"
+                                    />
+                                    <source srcset="./images/im3-1x-tab.jpg 1x,
+                                    ./images/im3-2x-comp.jpg 2x"
+                                    media="(min-width: 768px)"
+                                    />
+                                    <source srcset="./images/im3-1x-tel.jpg 1x,
+                                    ./images/im3-2x-tel.jpg 2x"
+                                    media="(max-width:768px)"
+                                    />
+                                    <img class="function-picture" src="./images/im3.jpg" 
+                                    alt="Pages app" width="360" />
+                                </picture>
                             <p class="function-color-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                             </p>
                         </div>
@@ -305,7 +405,22 @@
                         </li>
                     <li class="function-item">
                             <div class="function-dopcontainer-big">  
-                            <img class="function-picture" src="./images/im4.jpg" alt="Taxi page" width="360" height="300">
+                                <picture>
+                                    <source srcset="./images/im4.jpg 1x,
+                                    ./images/im4-2x-comp.jpg 2x"
+                                    media="(min-width: 1158px)"
+                                    />
+                                    <source srcset="./images/im4-1x-tab.jpg 1x,
+                                    ./images/im4-2x-comp.jpg 2x"
+                                    media="(min-width: 768px)"
+                                    />
+                                    <source srcset="./images/im4-1x-tel.jpg 1x,
+                                    ./images/im4-2x-tel.jpg 2x"
+                                    media="(max-width:768px)"
+                                    />
+                                    <img class="function-picture" src="./images/im4.jpg" 
+                                    alt="Pages app" width="360" />
+                                </picture>
                             <p class="function-color-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                             </p>
                         </div>
@@ -316,7 +431,22 @@
                         </li>
                     <li class="function-item">
                             <div class="function-dopcontainer-big">  
-                            <img class="function-picture" src="./images/im5.jpg" alt="Screen Illustrations" width="360" height="300">
+                                <picture>
+                                    <source srcset="./images/im5.jpg 1x,
+                                    ./images/im5-2x-comp.jpg 2x"
+                                    media="(min-width: 1158px)"
+                                    />
+                                    <source srcset="./images/im5-1x-tab.jpg 1x,
+                                    ./images/im5-2x-comp.jpg 2x"
+                                    media="(min-width: 768px)"
+                                    />
+                                    <source srcset="./images/im5-1x-tel.jpg 1x,
+                                    ./images/im5-2x-tel.jpg 2x"
+                                    media="(max-width:768px)"
+                                    />
+                                    <img class="function-picture" src="./images/im5.jpg" 
+                                    alt="Pages app" width="360" />
+                                </picture>
                             <p class="function-color-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                             </p>
                         </div>
@@ -327,7 +457,22 @@
                     </li>
                         <li class="function-item">
                           <div class="function-dopcontainer-big">  
-                            <img class="function-picture" src="./images/im6.jpg" alt="girl with phone" width="360" height="300">
+                            <picture>
+                                <source srcset="./images/im6.jpg 1x,
+                                ./images/im6-2x-comp.jpg 2x"
+                                media="(min-width: 1158px)"
+                                />
+                                <source srcset="./images/im6-1x-tab.jpg 1x,
+                                ./images/im6-2x-comp.jpg 2x"
+                                media="(min-width: 768px)"
+                                />
+                                <source srcset="./images/im6-1x-tel.jpg 1x,
+                                ./images/im6-2x-tel.jpg 2x"
+                                media="(max-width:768px)"
+                                />
+                                <img class="function-picture" src="./images/im6.jpg" 
+                                alt="Pages app" width="360" />
+                            </picture>
                             <p class="function-color-text">14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App · Cloud Storage App
                             </p>
                           </div>
@@ -404,7 +549,7 @@
             </div>
          </div>
     </footer>
-    <div class="backdrop hiden" >
+    <div class="backdrop " >
     <!-- is-open -->
         <div class="modal">
         <button type="button" class="modal-btm">
